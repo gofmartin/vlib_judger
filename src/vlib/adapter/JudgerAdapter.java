@@ -30,13 +30,19 @@ public class JudgerAdapter implements Judger {
 	public void judge(String projType, File file, Integer userId, Integer courseId) {
 		
 		if(projType.equalsIgnoreCase("c")) {
-			advancedJudger.judgeCProj(file, userId);
+			//判定c语言程序的具体实现
+			advancedJudger.judgeCProj(file, userId, courseId);
+			
 		}
 		else if(projType.equalsIgnoreCase("java")) {
-			advancedJudger.judgeJavaProj(file, userId);
+			//判定java程序的具体实现
+			advancedJudger.judgeJavaProj(file, userId, courseId);
+			
 		}
 		else if(projType.equalsIgnoreCase("cs")) {
-			advancedJudger.judgeCSProj(file, userId);
+			//判定C#程序的具体实现
+			advancedJudger.judgeCSProj(file, userId, courseId);
+			
 		}
 
 	}
